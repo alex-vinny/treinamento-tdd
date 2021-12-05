@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<IntermediateOutputPath>core\obj</IntermediateOutputPath>
+	<BaseIntermediateOutputPath>core\obj</BaseIntermediateOutputPath>
+	<OutputPath>core\bin</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StringCalculator.Lib\Library.Core.csproj" />
+	<Content Remove="Properties\**" />
+	<Compile Remove="Properties\**" />
+	<EmbeddedResource Remove="Properties\**" />
+	<None Remove="Properties\**" />
+	<None Update="*.config">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	</None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+	<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Nullable>enable</Nullable>
+	<IntermediateOutputPath>core\obj</IntermediateOutputPath>
+	<BaseIntermediateOutputPath>core\obj</BaseIntermediateOutputPath>
+	<OutputPath>core\bin</OutputPath>
+  </PropertyGroup>
+  
+  <ItemGroup>    
+	<Content Remove="Properties\**" />
+	<Compile Remove="Properties\**" />
+	<EmbeddedResource Remove="Properties\**" />
+	<None Remove="Properties\**" />
+  </ItemGroup>
+
+</Project>
